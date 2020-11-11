@@ -18,7 +18,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  // {useHash: true} evita que la pagina  no encuentre la ruta, por lo cual redirige a index.html 
+  imports: [ RouterModule.forRoot(routes, {useHash: true }) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
